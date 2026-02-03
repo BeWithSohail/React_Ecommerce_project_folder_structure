@@ -135,3 +135,237 @@ ecommerce-app/
 ├── .env.production
 ├── package.json
 └── vite.config.js
+
+
+
+
+## 📁 Folder Structure & Naming Conventions
+
+### public/
+**Purpose**
+- Static files served directly by the browser.
+
+**Naming**
+- Use **kebab-case** for files and folders.
+- Keep names short and descriptive.
+
+**Examples**
+- `favicon.ico`
+- `robots.txt`
+- `og-product.png`
+
+---
+
+### src/
+Main application source code.
+
+---
+
+### src/app/
+**Purpose**
+- Application bootstrap and configuration layer.
+
+**Naming**
+- Files use **PascalCase** for React components.
+- Config files use **camelCase**.
+
+**Examples**
+- `App.jsx`
+- `routes.jsx`
+- `providers.jsx`
+- `ErrorBoundary.jsx`
+
+---
+
+### src/assets/
+**Purpose**
+- Centralized static assets used inside the app.
+
+**Naming**
+- Folders use **plural nouns**.
+- Files use **kebab-case**.
+
+**Examples**
+- `images/logo.png`
+- `icons/cart.svg`
+- `fonts/inter-regular.woff2`
+
+---
+
+### src/components/
+**Purpose**
+- Reusable, presentational UI components.
+- No business logic or API calls.
+
+**Naming**
+- Folder: **PascalCase**
+- Component file: **Same as folder name**
+- Optional `index.js` for exports
+
+**Examples**
+- `Button/Button.jsx`
+- `Modal/Modal.jsx`
+- `ProductCard/ProductCard.jsx`
+
+---
+
+### src/layouts/
+**Purpose**
+- Layout wrappers defining page structure.
+
+**Naming**
+- Use **PascalCase** with `Layout` suffix.
+
+**Examples**
+- `MainLayout.jsx`
+- `AuthLayout.jsx`
+- `AdminLayout.jsx`
+
+---
+
+### src/features/
+**Purpose**
+- Feature-based (domain-driven) modules.
+
+**Naming**
+- Feature folders use **camelCase** or **kebab-case** (be consistent).
+- Files follow responsibility-based naming.
+
+**Examples**
+- `auth/`
+- `products/`
+- `cart/`
+- `checkout/`
+- `orders/`
+
+---
+
+### src/features/[feature]/pages/
+**Purpose**
+- Route-level pages for a specific feature.
+
+**Naming**
+- Use **PascalCase**.
+- Page names reflect the route.
+
+**Examples**
+- `Login.jsx`
+- `ProductList.jsx`
+- `ProductDetails.jsx`
+
+---
+
+### src/features/[feature]/components/
+**Purpose**
+- Feature-specific UI components.
+
+**Naming**
+- Same rules as global components.
+
+**Examples**
+- `LoginForm.jsx`
+- `ProductGrid.jsx`
+- `CartItem.jsx`
+
+---
+
+### src/features/[feature]/hooks/
+**Purpose**
+- Feature-specific custom hooks.
+
+**Naming**
+- Must start with `use`.
+- Use **camelCase**.
+
+**Examples**
+- `useAuth.js`
+- `useProducts.js`
+- `useCheckout.js`
+
+---
+
+### src/hooks/
+**Purpose**
+- Global reusable custom hooks.
+
+**Naming**
+- Must start with `use`.
+- Use **camelCase**.
+
+**Examples**
+- `useDebounce.js`
+- `useLocalStorage.js`
+- `useWindowSize.js`
+
+---
+
+### src/services/
+**Purpose**
+- API clients and third-party integrations.
+
+**Naming**
+- Use **camelCase**.
+- Use clear service suffixes.
+
+**Examples**
+- `apiClient.js`
+- `paymentService.js`
+- `analyticsService.js`
+
+---
+
+### src/store/
+**Purpose**
+- Global state management.
+
+**Naming**
+- Use **camelCase** for files.
+- Redux slices use `[feature]Slice.js`.
+
+**Examples**
+- `authSlice.js`
+- `productsSlice.js`
+- `rootReducer.js`
+
+---
+
+### src/utils/
+**Purpose**
+- Utility and helper functions.
+
+**Naming**
+- Use **camelCase**.
+- Function names should describe behavior.
+
+**Examples**
+- `formatCurrency.js`
+- `calculateDiscount.js`
+- `constants.js`
+
+---
+
+### src/styles/
+**Purpose**
+- Global styles and design tokens.
+
+**Naming**
+- Use **kebab-case** for CSS files.
+
+**Examples**
+- `globals.css`
+- `variables.css`
+- `fonts.css`
+
+---
+
+### Root Files
+**Naming**
+- Environment files use `.env` pattern.
+- Config files follow tool naming.
+
+**Examples**
+- `.env`
+- `.env.production`
+- `vite.config.js`
+- `package.json`
+
